@@ -6,7 +6,7 @@ If you want to use the tool on your own node, you should configure ```Apache2```
 The project folder may look like the following:
 
 ```
-flask_project/
+pfb_project/
 ├── static/
 │   ├── logo.png
 │   └── style.css
