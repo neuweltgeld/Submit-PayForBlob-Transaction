@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>PFB Transaction</title>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Celestia Logo">
+        <h1>Submit a PFB Transaction</h1>
+        <form onsubmit="submitForm(event)">
+            <div class="input-group">
+                <label for="namespace_id">Namespace ID:</label>
+                <input type="text" id="namespace_id" name="namespace_id" required>
+            </div>
+            <div class="input-group">
+                <label for="data">Data:</label>
+                <input type="text" id="data" name="data" required>
+            </div>
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+        <h2 id="processing" class="processing">Please wait, processing your request...</h2>
+        <div id="output-container" class="output-container">
+            <h2>Output:</h2>
+            <pre id="output" class="output"></pre>
+            <div class="txhash-container">
+                <h3>Txhash: <span id="txhash"></span></h3>
+            </div>
+            <button class="copy-btn" onclick="copyOutput()">Copy Output</button>
+            <a id="view-transaction" target="_blank">
+                <button class="view-transaction-btn">View Transaction</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
