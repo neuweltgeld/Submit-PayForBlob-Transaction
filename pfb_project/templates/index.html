@@ -16,13 +16,14 @@
         <form onsubmit="submitForm(event)">
             <div class="input-group">
                 <label for="namespace_id">Namespace ID:</label>
-                <input type="text" id="namespace_id" name="namespace_id" required>
+                <input type="text" id="namespace_id" name="namespace_id" placeholder="e.g. 0000010000000100" required>
             </div>
             <div class="input-group">
                 <label for="data">Data:</label>
-                <input type="text" id="data" name="data" required>
+                <input type="text" id="data" name="data" placeholder="e.g. f1f20ca8007e910a3bf8b2e61da0f26bca07ef78717a6ea54165f5" required>
             </div>
             <input type="submit" value="Submit" class="submit-btn">
+			<h2><a style="font-size: 0.75rem;font-weight: 300; text-decoration:none; padding-bottom:10px; text-align:center" href="https://go.dev/play/p/7ltvaj8lhRl" target=”_blank”>You can generate your own namespace_id and data values using this useful Golang Playground</a></h2>
         </form>
         <h2 id="processing" class="processing">Please wait, processing your request...</h2>
         <div id="output-container" class="output-container">
