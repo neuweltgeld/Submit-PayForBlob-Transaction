@@ -49,3 +49,4 @@ function validateNamespaceId(namespaceId) {
     const regex = /^[a-zA-Z0-9]+$/; // Regular expression for alphanumeric characters
     return namespaceId.length === 16 && regex.test(namespaceId);
 }
+
